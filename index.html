@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luz Marina Panadería · Panes de jamón</title>
+<meta name="description" content="Panes de jamón hechos en casa en Caracas. Mini: $5,5 (10 por $49). Grande: $15 (10 por $140). Pídelos por WhatsApp.">
+<meta property="og:title" content="Luz Marina Panadería">
+<meta property="og:description" content="Panes de jamón mini y grandes, hechos en casa en Caracas.">
+<meta property="og:image" content="https://zeider45.github.io/luzmarina-panaderia/img/compartir.png">
+<link rel="icon" href="img/icono.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--masa:#FBF4E8;--dorado:#E9A23B;--corteza:#B8691A;--cacao:#3B2314;--blanco:#fff;
+  --serif:'Fraunces',Georgia,serif;--sans:'DM Sans','Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--masa);color:var(--cacao);font:18px/1.6 var(--sans)}
+img{max-width:100%;display:block}
+.wrap>*{min-width:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;line-height:1.02}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--corteza)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cacao);color:var(--masa);text-decoration:none;font-weight:700;padding:16px 28px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.claro{background:var(--dorado);color:var(--cacao)}
+.foto{filter:drop-shadow(0 24px 20px rgba(80,45,15,.25))}
+
+header{padding:22px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:52px}
+.logo b{font-family:var(--serif);font-size:26px;line-height:1;display:block}
+.logo small{font-weight:700;font-size:11px;letter-spacing:5px;color:var(--corteza)}
+nav a{text-decoration:none;font-weight:500;margin-left:28px}
+@media(max-width:700px){nav a:not(.btn){display:none}}
+nav .btn{padding:10px 20px;font-size:15px}
+
+.hero{padding:40px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.etiqueta{font-weight:700;font-size:14px;letter-spacing:4px;color:var(--corteza);margin-bottom:16px}
+.hero h1{font-size:clamp(48px,8vw,92px);margin-bottom:22px}
+.hero p{font-size:20px;max-width:30ch;margin-bottom:32px}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}.hero .foto{order:-1}}
+
+.rombos{background:var(--cacao);color:var(--masa);position:relative;overflow:hidden;padding:90px 0}
+.rombos::before{content:"";position:absolute;inset:0;opacity:.07;background:
+ repeating-linear-gradient(45deg,var(--dorado) 0 2px,transparent 2px 40px),
+ repeating-linear-gradient(-45deg,var(--dorado) 0 2px,transparent 2px 40px)}
+.rombos .wrap{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.rombos h2{font-size:clamp(40px,6vw,64px);margin-bottom:20px}
+.rombos h2 em{color:var(--dorado)}
+.rombos ul{list-style:none;display:grid;gap:12px;margin-top:24px}
+.rombos li::before{content:"◆";color:var(--dorado);margin-right:12px}
+@media(max-width:800px){.rombos .wrap{grid-template-columns:1fr}}
+
+.pedir{padding:90px 0;text-align:center}
+.pedir h2{font-size:clamp(40px,6vw,64px);margin-bottom:14px}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:48px 0}
+.paso{background:var(--blanco);border-radius:24px;padding:32px 24px;text-align:left}
+.paso span{font-family:var(--serif);font-size:44px;color:var(--dorado);line-height:1}
+.paso h3{font-size:20px;margin:10px 0 6px}
+@media(max-width:800px){.pasos{grid-template-columns:1fr}}
+.pedir .foto{max-width:640px;margin:0 auto 40px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:36px}
+@media(max-width:800px){.menu{grid-template-columns:1fr}}
+.producto h3{font-family:var(--serif);font-size:28px;margin-bottom:14px}
+.precios{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.precio{background:var(--blanco);border-radius:24px;padding:22px 16px}
+.precio small{display:block;font-weight:700;font-size:13px;letter-spacing:3px;color:var(--corteza)}
+.precio b{display:block;font-family:var(--serif);font-size:clamp(40px,6vw,56px);line-height:1.1}
+.precio span{display:inline-block;background:var(--cacao);color:var(--masa);font-size:14px;font-weight:700;padding:4px 14px;border-radius:999px}
+.precio.destacado{background:var(--dorado)}
+.precio.destacado small{color:var(--cacao)}
+
+.grande{padding:90px 0}
+.grande .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+.grande h2{font-size:clamp(40px,6vw,64px);margin-bottom:20px}
+@media(max-width:800px){.grande .wrap{grid-template-columns:1fr}}
+
+.historia{background:var(--dorado);padding:80px 0}
+.historia .wrap{max-width:760px;text-align:center}
+.historia h2{font-size:clamp(34px,5vw,52px);margin-bottom:18px}
+.historia h2 em{color:var(--cacao)}
+
+footer{padding:40px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer a{margin-left:18px}
+.legal{opacity:.7}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#"><img src="img/icono.svg" alt=""><span><b>Luz Marina</b><small>PANADERÍA</small></span></a>
+  <nav><a href="#producto">Mini</a><a href="#grande">Grande</a><a href="#pedir">Cómo pedir</a><a class="btn" href="https://wa.me/584127192045?text=Hola%2C%20quiero%20pedir%20panes%20de%20jam%C3%B3n">Pedir</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="etiqueta">HECHOS EN CASA · CARACAS</div>
+    <h1>Panes <em>de jamón</em></h1>
+    <p>Masa suave y corteza dorada, rellenos de jamón ahumado, queso crema, tocineta y pasas. En tamaño mini y grande.</p>
+    <a class="btn" href="https://wa.me/584127192045?text=Hola%2C%20quiero%20pedir%20panes%20de%20jam%C3%B3n">Pedir por WhatsApp →</a>
+  </div>
+  <img class="foto" src="img/94202.webp" alt="Mini pan de jamón entero y uno cortado mostrando el relleno">
+</div></section>
+
+<section class="rombos" id="producto"><div class="wrap">
+  <img class="foto" src="img/94201.webp" alt="Corte de un mini pan de jamón con jamón ahumado, queso crema, tocineta y pasas">
+  <div>
+    <h2>Por dentro, <em>puro relleno.</em></h2>
+    <p>Enrollados a mano, con su tejido de rombos y horneados hasta quedar dorados. El tamaño perfecto para la merienda, una reunión o para regalar.</p>
+    <ul><li>Jamón ahumado en capas</li><li>Queso crema</li><li>Tocineta</li><li>Pasas</li></ul>
+  </div>
+</div></section>
+
+<section class="grande" id="grande"><div class="wrap">
+  <div>
+    <div class="etiqueta">EL CLÁSICO</div>
+    <h2>El grande, <em>para compartir.</em></h2>
+    <p>El mismo relleno de jamón ahumado, queso crema, tocineta y pasas, en un pan grande: para la mesa familiar, la oficina o regalar.</p>
+  </div>
+  <img class="foto" src="img/pan_grande.webp" alt="Pan de jamón grande con su tejido de rombos dorado">
+</div></section>
+
+<section class="pedir" id="pedir"><div class="wrap">
+  <h2>¿Cuántos te <em>apartamos?</em></h2>
+  <p>Por unidad, en paquete de 10 o por encargo para tu evento. Entregas en Caracas.</p>
+  <div class="menu">
+    <div class="producto">
+      <h3>Mini pan de jamón</h3>
+      <div class="precios">
+        <div class="precio"><small>1 UNIDAD</small><b>$5,5</b></div>
+        <div class="precio destacado"><small>PAQUETE DE 10</small><b>$49</b><span>Ahorras $6</span></div>
+      </div>
+    </div>
+    <div class="producto">
+      <h3>Pan de jamón grande</h3>
+      <div class="precios">
+        <div class="precio"><small>1 UNIDAD</small><b>$15</b></div>
+        <div class="precio destacado"><small>PAQUETE DE 10</small><b>$140</b><span>Ahorras $10</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pasos">
+    <div class="paso"><span>1</span><h3>Escríbenos</h3><p>Mándanos un WhatsApp con la cantidad que quieres.</p></div>
+    <div class="paso"><span>2</span><h3>Confirmamos</h3><p>Te confirmamos el total, la fecha y la hora de entrega.</p></div>
+    <div class="paso"><span>3</span><h3>A disfrutar</h3><p>Retiras o te los llevamos recién horneados.</p></div>
+  </div>
+  <img class="foto" src="img/94203.webp" alt="Mini pan de jamón visto desde arriba">
+  <a class="btn" href="https://wa.me/584127192045?text=Hola%2C%20quiero%20pedir%20panes%20de%20jam%C3%B3n">Hacer mi pedido →</a>
+</div></section>
+
+<section class="historia"><div class="wrap">
+  <h2>La sazón de <em>Luz Marina</em></h2>
+  <p>Lo que empezó en nuestra lonchería ahora llega a tu mesa como panadería: recetas de casa, hechas con cariño y sin apuro. Los panes de jamón son los primeros de muchos.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="logo" href="#"><img src="img/icono.svg" alt=""><span><b>Luz Marina</b><small>PANADERÍA</small></span></a>
+  <div><a href="https://instagram.com/luzmarina.panaderia">Instagram</a><a href="https://wa.me/584127192045">WhatsApp 0412-7192045</a></div>
+  <div class="legal">Lonchería Luz Marina · © 2026</div>
+</div></footer>
+</body>
+</html>
